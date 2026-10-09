@@ -1,0 +1,9 @@
+[
+  { "fullName": "System Admin",    "email": "admin@minilms.com",            "role": "Admin" },
+  { "fullName": "Ahmed Hassan",    "email": "ahmed.instructor@minilms.com", "role": "Instructor" },
+  { "fullName": "Sara Mahmoud",    "email": "sara.instructor@minilms.com",  "role": "Instructor" },
+  { "fullName": "Omar Khaled",     "email": "omar.student@minilms.com",     "role": "Student" },
+  { "fullName": "Mona Ali",        "email": "mona.student@minilms.com",     "role": "Student" },
+  { "fullName": "Youssef Ibrahim", "email": "youssef.student@minilms.com",  "role": "Student" },
+  { "fullName": "Nour Adel",       "email": "nour.student@minilms.com",     "role": "Student" }
+]

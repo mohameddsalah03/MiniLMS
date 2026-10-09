@@ -1,0 +1,50 @@
+[
+  {
+    "nameEn": "Programming",
+    "nameAr": "البرمجة"
+  },
+  {
+    "nameEn": "Web Development",
+    "nameAr": "تطوير الويب"
+  },
+  {
+    "nameEn": "Mobile Development",
+    "nameAr": "تطوير تطبيقات الموبايل"
+  },
+  {
+    "nameEn": "Databases",
+    "nameAr": "قواعد البيانات"
+  },
+  {
+    "nameEn": "Data Science",
+    "nameAr": "علم البيانات"
+  },
+  {
+    "nameEn": "Artificial Intelligence",
+    "nameAr": "الذكاء الاصطناعي"
+  },
+  {
+    "nameEn": "Cyber Security",
+    "nameAr": "الأمن السيبراني"
+  },
+  {
+    "nameEn": "Networking",
+    "nameAr": "الشبكات"
+  },
+  {
+    "nameEn": "Cloud Computing",
+    "nameAr": "الحوسبة السحابية"
+  },
+  {
+    "nameEn": "DevOps",
+    "nameAr": "ديف أوبس"
+  },
+  {
+    "nameEn": "UI/UX Design",
+    "nameAr": "تصميم واجهات وتجربة المستخدم"
+  },
+  {
+    "nameEn": "Project Management",
+    "nameAr": "إدارة المشاريع"
+  }
+]
