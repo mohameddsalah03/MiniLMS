@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MiniLMS.Application.Common.Interfaces;
+using MiniLMS.Domain.Entities;
 using MiniLMS.Infrastructure.Persistence;
 using MiniLMS.Infrastructure.Persistence.Repositories;
 
@@ -20,7 +22,9 @@ namespace MiniLMS.Infrastructure
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-
+            services.AddIdentityCore<ApplicationUser>()
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>();
             return services;
         }
 

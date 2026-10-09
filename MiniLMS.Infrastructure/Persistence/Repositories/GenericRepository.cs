@@ -31,23 +31,27 @@ namespace MiniLMS.Infrastructure.Persistence.Repositories
         #region With Spec
 
         public async Task<IEnumerable<TEntity>> GetAllWithSpecAsync(ISpecifications<TEntity, TKey> spec)
-            => await ApplaySpecifications(spec).ToListAsync();
+            => await ApplySpecifications(spec).ToListAsync();
         public async Task<TEntity?> GetWithSpecAsync(ISpecifications<TEntity, TKey> spec)
-            => await ApplaySpecifications(spec).FirstOrDefaultAsync();
+            => await ApplySpecifications(spec).FirstOrDefaultAsync();
 
 
         public async Task<int> GetCountAsync(ISpecifications<TEntity, TKey> spec)
             => await SpecificationsEvaluator.GetCriteriaQuery(_dbContext.Set<TEntity>(), spec).CountAsync();
 
 
+        public async Task<bool> AnyAsync(ISpecifications<TEntity, TKey> spec)
+         => await SpecificationsEvaluator.GetCriteriaQuery(_dbContext.Set<TEntity>(), spec).AnyAsync();
+
         #endregion
 
         #region Helper Methods
 
-        private IQueryable<TEntity> ApplaySpecifications(ISpecifications<TEntity, TKey> spec)
+        private IQueryable<TEntity> ApplySpecifications(ISpecifications<TEntity, TKey> spec)
         {
             return SpecificationsEvaluator.GetQuery(_dbContext.Set<TEntity>(), spec);
         }
+
 
         #endregion
     }

@@ -5,7 +5,7 @@ namespace MiniLMS.Application.Common.Interfaces
     public interface IUnitOfWork
     {
 
-        public IGenericRepository<TEntity, Tkey> GetRepo<TEntity, Tkey>() where TEntity : BaseEntity<Tkey>
+        IGenericRepository<TEntity, Tkey> GetRepo<TEntity, Tkey>() where TEntity : BaseEntity<Tkey>
             where Tkey : IEquatable<Tkey>;
 
 

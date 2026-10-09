@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>6fee9069-0889-4c7e-91ca-69e5182ca09d</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,10 +18,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MiniLMS.Infrastructure\MiniLMS.Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

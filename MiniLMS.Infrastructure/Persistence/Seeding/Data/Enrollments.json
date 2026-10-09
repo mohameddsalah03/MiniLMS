@@ -1,0 +1,59 @@
+[
+  {
+    "courseTitleEn": "C# Fundamentals",
+    "studentEmail": "omar.student@minilms.com"
+  },
+  {
+    "courseTitleEn": "C# Fundamentals",
+    "studentEmail": "mona.student@minilms.com"
+  },
+  {
+    "courseTitleEn": "C# Fundamentals",
+    "studentEmail": "youssef.student@minilms.com"
+  },
+  {
+    "courseTitleEn": "C# Fundamentals",
+    "studentEmail": "nour.student@minilms.com"
+  },
+
+  {
+    "courseTitleEn": "ASP.NET Core Web API",
+    "studentEmail": "omar.student@minilms.com"
+  },
+  {
+    "courseTitleEn": "ASP.NET Core Web API",
+    "studentEmail": "mona.student@minilms.com"
+  },
+  {
+    "courseTitleEn": "ASP.NET Core Web API",
+    "studentEmail": "youssef.student@minilms.com"
+  },
+
+  {
+    "courseTitleEn": "SQL Server for Beginners",
+    "studentEmail": "omar.student@minilms.com"
+  },
+  {
+    "courseTitleEn": "SQL Server for Beginners",
+    "studentEmail": "nour.student@minilms.com"
+  },
+
+  {
+    "courseTitleEn": "Python for Data Analysis",
+    "studentEmail": "mona.student@minilms.com"
+  },
+  {
+    "courseTitleEn": "Python for Data Analysis",
+    "studentEmail": "youssef.student@minilms.com"
+  },
+
+  {
+    "courseTitleEn": "Introduction to Machine Learning",
+    "studentEmail": "mona.student@minilms.com"
+  },
+
+  {
+    "courseTitleEn": "Docker and CI/CD",
+    "studentEmail": "youssef.student@minilms.com"
+  }
+]

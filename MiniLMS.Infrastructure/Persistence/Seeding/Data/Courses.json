@@ -1,0 +1,66 @@
+[
+  {
+    "titleEn": "C# Fundamentals",
+    "titleAr": "أساسيات C#",
+    "descriptionEn": "Learn the core of C#: types, control flow, OOP and collections.",
+    "descriptionAr": "تعلّم أساسيات C#: الأنواع، التحكم في التدفق، البرمجة كائنية التوجه والـ collections.",
+    "categoryNameEn": "Programming",
+    "instructorEmail": "ahmed.instructor@minilms.com"
+  },
+  {
+    "titleEn": "ASP.NET Core Web API",
+    "titleAr": "ASP.NET Core Web API",
+    "descriptionEn": "Build RESTful APIs with ASP.NET Core, EF Core and Clean Architecture.",
+    "descriptionAr": "ابنِ RESTful APIs باستخدام ASP.NET Core و EF Core و Clean Architecture.",
+    "categoryNameEn": "Web Development",
+    "instructorEmail": "ahmed.instructor@minilms.com"
+  },
+  {
+    "titleEn": "SQL Server for Beginners",
+    "titleAr": "SQL Server للمبتدئين",
+    "descriptionEn": "Tables, queries, joins, views and stored procedures from scratch.",
+    "descriptionAr": "الجداول والاستعلامات والـ joins والـ views والـ stored procedures من الصفر.",
+    "categoryNameEn": "Databases",
+    "instructorEmail": "ahmed.instructor@minilms.com"
+  },
+  {
+    "titleEn": "Docker and CI/CD",
+    "titleAr": "دوكر و CI/CD",
+    "descriptionEn": "Containerize applications and automate build and deployment pipelines.",
+    "descriptionAr": "تغليف التطبيقات في containers وأتمتة عمليات البناء والنشر.",
+    "categoryNameEn": "DevOps",
+    "instructorEmail": "ahmed.instructor@minilms.com"
+  },
+  {
+    "titleEn": "Python for Data Analysis",
+    "titleAr": "بايثون لتحليل البيانات",
+    "descriptionEn": "Analyze and visualize data using Python, Pandas and Matplotlib.",
+    "descriptionAr": "تحليل وعرض البيانات باستخدام Python و Pandas و Matplotlib.",
+    "categoryNameEn": "Data Science",
+    "instructorEmail": "sara.instructor@minilms.com"
+  },
+  {
+    "titleEn": "Introduction to Machine Learning",
+    "titleAr": "مقدمة في تعلّم الآلة",
+    "descriptionEn": "Core ML concepts: regression, classification and model evaluation.",
+    "descriptionAr": "المفاهيم الأساسية لتعلّم الآلة: regression و classification وتقييم النماذج.",
+    "categoryNameEn": "Artificial Intelligence",
+    "instructorEmail": "sara.instructor@minilms.com"
+  },
+  {
+    "titleEn": "Ethical Hacking Basics",
+    "titleAr": "أساسيات الاختراق الأخلاقي",
+    "descriptionEn": "Understand common vulnerabilities and how to defend against them.",
+    "descriptionAr": "فهم الثغرات الشائعة وطرق الحماية منها.",
+    "categoryNameEn": "Cyber Security",
+    "instructorEmail": "sara.instructor@minilms.com"
+  },
+  {
+    "titleEn": "UI/UX Design Principles",
+    "titleAr": "أساسيات تصميم واجهات المستخدم",
+    "descriptionEn": "Design clear, usable interfaces: layout, color, typography and flows.",
+    "descriptionAr": "تصميم واجهات واضحة وسهلة الاستخدام: التخطيط والألوان والخطوط وتدفق المستخدم.",
+    "categoryNameEn": "UI/UX Design",
+    "instructorEmail": "sara.instructor@minilms.com"
+  }
+]
