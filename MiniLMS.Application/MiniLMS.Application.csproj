@@ -18,4 +18,8 @@
     <ProjectReference Include="..\MiniLMS.Domain\MiniLMS.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Auth\Mappings\" />
+  </ItemGroup>
+
 </Project>

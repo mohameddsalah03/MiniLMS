@@ -8,6 +8,7 @@ namespace MiniLMS.Application.Features.Categories.Specifications
         public CategoriesOrderedSpecifications()
         {
             ApplyOrderBy(c => c.NameEn);
+            AddInclude(c => c.Courses);
         }
     }
 }

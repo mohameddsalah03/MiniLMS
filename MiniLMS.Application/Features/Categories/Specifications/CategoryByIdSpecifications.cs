@@ -7,6 +7,8 @@ namespace MiniLMS.Application.Features.Categories.Specifications
     {
         public CategoryByIdSpecifications(int id)
             : base(c => c.Id == id)
-        { }
+        {
+            AddInclude(c => c.Courses);
+        }
     }
 }

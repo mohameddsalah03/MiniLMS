@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MiniLMS.API.Models;
+using MiniLMS.API.Services;
+using MiniLMS.Application.Common.Interfaces;
 
 namespace MiniLMS.API.Extensions;
 
@@ -21,6 +23,9 @@ public static class ApiServiceExtensions // this class to make response to front
                     return new BadRequestObjectResult(BaseResponse<object>.Fail("Validation failed.", errors));
                 };
             });
+
+        services.AddHttpContextAccessor();
+        services.AddScoped<ICurrentUserService, CurrentUserService>();
 
         return services;
     }
