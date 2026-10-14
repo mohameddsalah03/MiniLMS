@@ -11,5 +11,6 @@ namespace MiniLMS.Application.Common.Interfaces
 
         Task<int> SaveChangesAsync();
         Task ExecuteInTransactionAsync(Func<Task> action);
+
     }
 }

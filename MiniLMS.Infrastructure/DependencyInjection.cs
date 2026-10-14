@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MiniLMS.Application.Common.Interfaces;
 using MiniLMS.Domain.Entities;
+using MiniLMS.Infrastructure.Identity;
 using MiniLMS.Infrastructure.Persistence;
 using MiniLMS.Infrastructure.Persistence.Repositories;
 
@@ -25,6 +26,9 @@ namespace MiniLMS.Infrastructure
             services.AddIdentityCore<ApplicationUser>()
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>();
+
+            services.AddScoped<IIdentityService, IdentityService>();
+            services.AddScoped<ITokenService, JwtTokenService>();
             return services;
         }
 

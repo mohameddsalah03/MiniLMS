@@ -17,10 +17,6 @@
 		<ProjectReference Include="..\MiniLMS.Application\MiniLMS.Application.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<Folder Include="Identity\" />
-	</ItemGroup>
-
 	<!-- ← ضيف ده -->
 	<ItemGroup>
 		<None Update="Persistence\Seeding\Data\*.json">
