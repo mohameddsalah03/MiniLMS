@@ -2,6 +2,7 @@
 using MiniLMS.API.Models;
 using MiniLMS.API.Services;
 using MiniLMS.Application.Common.Interfaces;
+using System.Text.Json.Serialization;
 
 namespace MiniLMS.API.Extensions;
 
@@ -10,6 +11,7 @@ public static class ApiServiceExtensions // this class to make response to front
     public static IServiceCollection AddApiServices(this IServiceCollection services)
     {
         services.AddControllers()
+            .AddJsonOptions(opt => opt.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()))
             .ConfigureApiBehaviorOptions(options =>
             {
                 options.InvalidModelStateResponseFactory = context =>

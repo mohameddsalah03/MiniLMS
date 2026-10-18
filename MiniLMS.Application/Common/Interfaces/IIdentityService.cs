@@ -7,5 +7,6 @@ namespace MiniLMS.Application.Common.Interfaces
         Task<UserDto> RegisterStudentAsync(RegisterDto register);
         Task<UserDto> ValidateCredentialsAsync(LoginDto login);
         Task<UserDto> GetUserByIdAsync(string userId);
+        Task<bool> IsUserInRoleAsync(string userId, string role);
     }
 }

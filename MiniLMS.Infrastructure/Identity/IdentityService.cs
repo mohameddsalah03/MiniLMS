@@ -82,5 +82,10 @@ namespace MiniLMS.Infrastructure.Identity
             throw new ValidationException(errors);
         }
 
+        public async Task<bool> IsUserInRoleAsync(string userId, string role)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            return user is not null && await _userManager.IsInRoleAsync(user, role);
+        }
     }
 }
