@@ -4,8 +4,8 @@ namespace MiniLMS.Application.Common.Interfaces
 {
     public interface IIdentityService
     {
-        Task<UserDto> RegisterStudentAsync(RegisterDto register);
-        Task<UserDto> ValidateCredentialsAsync(LoginDto login);
+        Task<UserDto> RegisterStudentAsync(string FullName, string Email, string Password);
+        Task<UserDto> ValidateCredentialsAsync(string Email, string Password);
         Task<UserDto> GetUserByIdAsync(string userId);
         Task<bool> IsUserInRoleAsync(string userId, string role);
     }

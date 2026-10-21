@@ -4,8 +4,6 @@ using MiniLMS.Application.Common.Interfaces;
 using MiniLMS.Application.Features.Auth.DTOs;
 using MiniLMS.Domain.Constants;
 using MiniLMS.Domain.Entities;
-using System.Data;
-
 namespace MiniLMS.Infrastructure.Identity
 {
     internal sealed class IdentityService(
@@ -13,22 +11,24 @@ namespace MiniLMS.Infrastructure.Identity
         IUnitOfWork _unitOfWork)
         : IIdentityService
     {
-        public async Task<UserDto> RegisterStudentAsync(RegisterDto register)
+        public async Task<UserDto> RegisterStudentAsync(string FullName,
+        string Email,
+        string Password)
         {
-            var existsEmail = await _userManager.FindByEmailAsync(register.Email);
+            var existsEmail = await _userManager.FindByEmailAsync(Email);
             if (existsEmail != null)
                 throw new ConflictException("This email is already registered.");
 
             var user = new ApplicationUser
             {
-                Email = register.Email,
-                FullName = register.FullName,
-                UserName = register.Email
+                Email = Email,
+                FullName = FullName,
+                UserName = Email
             };
 
             await _unitOfWork.ExecuteInTransactionAsync(async () =>
             {
-                ThrowIfFailed(await _userManager.CreateAsync(user, register.Password));
+                ThrowIfFailed(await _userManager.CreateAsync(user, Password));
                 ThrowIfFailed(await _userManager.AddToRoleAsync(user, Roles.Student));
 
             });
@@ -40,16 +40,16 @@ namespace MiniLMS.Infrastructure.Identity
         }
 
 
-        public async Task<UserDto> ValidateCredentialsAsync(LoginDto login)
+        public async Task<UserDto> ValidateCredentialsAsync(string Email, string Password)
         {
-            var user = await _userManager.FindByEmailAsync(login.Email);
+            var user = await _userManager.FindByEmailAsync(Email);
             if (user is null)
                 throw new UnauthorizedException("Invalid email or password.");
 
             if (await _userManager.IsLockedOutAsync(user))
                 throw new UnauthorizedException("Account is temporarily locked.");
 
-            if (!await _userManager.CheckPasswordAsync(user, login.Password))
+            if (!await _userManager.CheckPasswordAsync(user, Password))
             {
                 await _userManager.AccessFailedAsync(user);
                 throw new UnauthorizedException("Invalid email or password.");

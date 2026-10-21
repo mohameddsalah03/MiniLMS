@@ -7,6 +7,6 @@ namespace MiniLMS.Application.Features.Categories.Commands.UpdateCategory
     public record UpdateCategoryCommand(string NameEn, string NameAr) : IRequest<CategoryDto>
     {
         [JsonIgnore]
-        public int Id { get; set; }
+        public int Id { get; init; }
     }
 }

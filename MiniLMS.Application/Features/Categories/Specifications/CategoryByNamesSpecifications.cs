@@ -13,7 +13,7 @@ namespace MiniLMS.Application.Features.Categories.Specifications
                  && (excludeId == null || c.Id != excludeId)
                   )
         {
-            AddInclude(c => c.Courses);
+            //AddInclude(c => c.Courses);
         }
     }
 }

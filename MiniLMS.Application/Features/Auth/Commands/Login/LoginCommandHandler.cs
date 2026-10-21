@@ -9,7 +9,7 @@ namespace MiniLMS.Application.Features.Auth.Commands.Login
     {
         public async Task<AuthResponse> Handle(LoginCommand request, CancellationToken cancellationToken)
         {
-            var user = await _identityService.ValidateCredentialsAsync(request.Login);
+            var user = await _identityService.ValidateCredentialsAsync(request.Email, request.Password);
             var token = _tokenService.Generate(user);
             return new AuthResponse(token.Token, token.ExpiresAt, user);
         }

@@ -38,10 +38,17 @@ public abstract class BaseSpecifications<TEntity, TKey> : ISpecifications<TEntit
         => ThenIncludes.Add(includePath);
 
     protected void ApplyOrderBy(Expression<Func<TEntity, object>> orderBy)
-        => OrderBy = orderBy;
+    {
+        OrderBy = orderBy;
+        OrderByDesc = null;
+    }
+
 
     protected void ApplyOrderByDesc(Expression<Func<TEntity, object>> orderByDesc)
-        => OrderByDesc = orderByDesc;
+    {
+        OrderByDesc = orderByDesc;
+        OrderBy = null;
+    }
 
     protected void ApplyPagination(int pageIndex, int pageSize)
     {

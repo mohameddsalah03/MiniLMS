@@ -8,7 +8,7 @@ namespace MiniLMS.Application.Features.Categories.Specifications
         public CategoriesOrderedSpecifications()
         {
             ApplyOrderBy(c => c.NameEn);
-            AddInclude(c => c.Courses);
+            //AddInclude(c => c.Courses); if u need it must add props in query record
         }
     }
 }

@@ -3,7 +3,9 @@ using MiniLMS.Application.Features.Auth.DTOs;
 
 namespace MiniLMS.Application.Features.Auth.Commands.Register
 {
-    public record RegisterCommand(RegisterDto Register) : IRequest<AuthResponse>
+    public record RegisterCommand(string FullName,
+        string Email,
+        string Password) : IRequest<AuthResponse>
     {
     }
 }

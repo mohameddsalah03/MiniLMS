@@ -6,9 +6,9 @@ namespace MiniLMS.Application.Features.Auth.Commands.Register
     {
         public RegisterCommandValidator()
         {
-            RuleFor(r => r.Register.FullName).NotEmpty().MaximumLength(100);
-            RuleFor(r => r.Register.Email).NotEmpty().EmailAddress().MaximumLength(100);
-            RuleFor(r => r.Register.Password).NotEmpty();
+            RuleFor(r => r.FullName).NotEmpty().MaximumLength(100);
+            RuleFor(r => r.Email).NotEmpty().EmailAddress().MaximumLength(100);
+            RuleFor(r => r.Password).NotEmpty();
         }
     }
 }

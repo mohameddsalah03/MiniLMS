@@ -11,7 +11,7 @@ namespace MiniLMS.Application.Features.Auth.Commands.Register
 
         public async Task<AuthResponse> Handle(RegisterCommand request, CancellationToken cancellationToken)
         {
-            var user = await _identityService.RegisterStudentAsync(request.Register);
+            var user = await _identityService.RegisterStudentAsync(request.FullName, request.Email, request.Password);
             var token = _tokenService.Generate(user);
 
             return new AuthResponse(token.Token, token.ExpiresAt, user);

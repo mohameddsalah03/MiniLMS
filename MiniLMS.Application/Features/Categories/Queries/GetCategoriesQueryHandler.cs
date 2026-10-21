@@ -11,7 +11,7 @@ namespace MiniLMS.Application.Features.Categories.Queries
     public class GetCategoriesQueryHandler(IUnitOfWork _unitOfWork, IMapper _mapper)
         : IRequestHandler<GetCategoriesQuery, PaginatedResult<CategoryDto>>
     {
-        async Task<PaginatedResult<CategoryDto>> IRequestHandler<GetCategoriesQuery, PaginatedResult<CategoryDto>>.Handle(GetCategoriesQuery request, CancellationToken cancellationToken)
+        public async Task<PaginatedResult<CategoryDto>> Handle(GetCategoriesQuery request, CancellationToken cancellationToken)
         {
             var repo = _unitOfWork.GetRepo<Category, int>();
             var spec = new CategoriesPagedSpecifications(request.PageIndex, request.PageSize);
